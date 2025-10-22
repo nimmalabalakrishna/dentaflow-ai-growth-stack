@@ -39,11 +39,11 @@ const Hero = ({ onBookingClick }: HeroProps) => {
           <div className="flex flex-wrap justify-center gap-6 pt-4">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              <span className="text-foreground">$200K-$500K Revenue Recovery</span>
+              <span className="text-foreground">250-620% Revenue Increase</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              <span className="text-foreground">20-25 Hours Saved Weekly</span>
+              <span className="text-foreground">40-50% Staff Time Reduction</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />

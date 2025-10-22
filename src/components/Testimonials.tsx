@@ -4,25 +4,25 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "DentaFlow recovered $180K in our first year by automating patient recalls and no-show prevention. Our staff actually has time to focus on patient care now instead of chasing appointments.",
+      quote: "DentaFlow increased our revenue by 280% in our first year by automating patient recalls and no-show prevention. Our staff actually has time to focus on patient care now instead of chasing appointments.",
       author: "Dr. Sarah Mitchell",
       role: "Practice Owner",
       practice: "Mitchell Dental Care",
-      results: "$180K recovered, 22 hrs/week saved"
+      results: "280% revenue increase, 45% time saved"
     },
     {
       quote: "We were skeptical about AI, but their revenue cycle system reduced our claim rejections by 87% and freed up our entire billing team to focus on complex cases. The ROI was undeniable.",
       author: "Jennifer Chen",
       role: "Practice Manager",
       practice: "Bright Smiles Dentistry",
-      results: "87% fewer rejections, $95K additional collections"
+      results: "87% fewer rejections, 6% collection increase"
     },
     {
-      quote: "The lead response system is a game-changer. We went from losing 70% of our web inquiries to booking 60% of them. That's 10 new patients per month we would have lost to competitors.",
+      quote: "The lead response system is a game-changer. We went from losing 70% of our web inquiries to booking 60% of them. That's 250% more new patients per month we would have retained from competitors.",
       author: "Dr. Marcus Thompson",
       role: "Owner & Dentist",
       practice: "Thompson Family Dentistry",
-      results: "10 new patients/month, $120K annual revenue increase"
+      results: "250% patient increase, 350% revenue boost"
     }
   ];
 

@@ -4,15 +4,15 @@ import { TrendingUp, Clock, DollarSign } from "lucide-react";
 const SocialProof = () => {
   const stats = [
     {
-      icon: DollarSign,
-      value: "$205K-$510K",
-      label: "Average Annual Revenue Recovery",
+      icon: TrendingUp,
+      value: "250-620%",
+      label: "Revenue Increase",
       description: "From automated patient retention systems"
     },
     {
       icon: Clock,
-      value: "20-25 Hours",
-      label: "Staff Time Saved Weekly",
+      value: "40-50%",
+      label: "Staff Time Reduction",
       description: "Through intelligent workflow automation"
     },
     {

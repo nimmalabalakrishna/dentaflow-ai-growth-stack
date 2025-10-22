@@ -15,8 +15,8 @@ const Systems = ({ onBookingClick }: SystemsProps) => {
       problem: "Your practice loses $80-180K annually from no-shows, missed recalls, and inactive patients.",
       solution: "Automated workflows that prevent revenue leakage through intelligent reminders, reactivation campaigns, and waitlist management.",
       benefits: [
-        "Recover $205-510K in annual revenue",
-        "Save staff 20-25 hours per week",
+        "250-620% revenue increase annually",
+        "40-50% staff time reduction weekly",
         "350-900% ROI within 6 months",
         "HIPAA-compliant automation"
       ],
@@ -29,10 +29,10 @@ const Systems = ({ onBookingClick }: SystemsProps) => {
       problem: "Manual insurance verification and claim errors delay collections and waste valuable staff time.",
       solution: "Intelligent automation that verifies eligibility, scrubs claims before submission, and handles follow-ups automatically.",
       benefits: [
-        "Additional $90K collections per $1.8M production",
+        "5% lift in total collections",
         "50% faster revenue cycle",
-        "10-15 hours back-office time saved weekly",
-        "5% lift in total collections"
+        "25-35% back-office time reduction weekly",
+        "87% reduction in claim rejections"
       ],
       roi: "4 months"
     },
@@ -43,9 +43,9 @@ const Systems = ({ onBookingClick }: SystemsProps) => {
       problem: "80% of dental inquiries never book because practices respond too slowly or not at all.",
       solution: "AI-powered instant response system with 24/7 chatbots, voice agents, and SMS follow-ups that book appointments automatically.",
       benefits: [
-        "8-12 additional new patients monthly",
-        "$60-150K additional annual revenue",
-        "3x conversion rates on inquiries",
+        "200-300% increase in monthly new patients",
+        "150-400% boost in annual revenue",
+        "300% higher conversion on inquiries",
         "80% reduction in staff workload"
       ],
       roi: "3 months"

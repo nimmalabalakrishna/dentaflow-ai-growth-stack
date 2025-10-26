@@ -1,11 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface FinalCTAProps {
   onBookingClick: () => void;
 }
 
 const FinalCTA = ({ onBookingClick }: FinalCTAProps) => {
+  const { trackCTAClick } = useAnalytics();
+
+  const handleCTAClick = () => {
+    trackCTAClick('final_cta', 'Book Your Free Strategy Session');
+    onBookingClick();
+  };
+
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-background via-card to-background">
       <div className="container max-w-4xl mx-auto text-center">
@@ -32,7 +40,7 @@ const FinalCTA = ({ onBookingClick }: FinalCTAProps) => {
               variant="hero" 
               size="lg" 
               className="text-lg px-8 py-6 h-auto"
-              onClick={onBookingClick}
+              onClick={handleCTAClick}
             >
               Book Your Free Strategy Session
               <ArrowRight className="w-5 h-5" />

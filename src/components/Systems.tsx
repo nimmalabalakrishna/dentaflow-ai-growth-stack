@@ -1,12 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, FileCheck, MessageSquare, ArrowRight } from "lucide-react";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface SystemsProps {
   onBookingClick: () => void;
 }
 
 const Systems = ({ onBookingClick }: SystemsProps) => {
+  const { trackCTAClick } = useAnalytics();
+
+  const handleSystemCTAClick = (systemName: string) => {
+    trackCTAClick('systems_section', `Learn More - ${systemName}`);
+    onBookingClick();
+  };
+
   const systems = [
     {
       icon: Users,
@@ -119,7 +127,7 @@ const Systems = ({ onBookingClick }: SystemsProps) => {
                       <span className="text-muted-foreground">ROI Timeline: </span>
                       <span className="font-semibold text-primary">{system.roi}</span>
                     </div>
-                    <Button variant="ghost" className="text-primary" onClick={onBookingClick}>
+                    <Button variant="ghost" className="text-primary" onClick={() => handleSystemCTAClick(system.name)}>
                       Learn More
                       <ArrowRight className="w-4 h-4" />
                     </Button>
@@ -135,7 +143,10 @@ const Systems = ({ onBookingClick }: SystemsProps) => {
             variant="hero" 
             size="lg" 
             className="text-lg px-8 py-6 h-auto"
-            onClick={onBookingClick}
+            onClick={() => {
+              trackCTAClick('systems_bottom', 'Book Your AI Strategy Session');
+              onBookingClick();
+            }}
           >
             Book Your AI Strategy Session
             <ArrowRight className="w-5 h-5" />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import Systems from "@/components/Systems";
@@ -7,12 +7,27 @@ import FAQ from "@/components/FAQ";
 import Trust from "@/components/Trust";
 import FinalCTA from "@/components/FinalCTA";
 import BookingModal from "@/components/BookingModal";
+import ChatWidget from "@/components/ChatWidget";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Index = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const { trackPageView, trackBookingModal } = useAnalytics();
+
+  useEffect(() => {
+    trackPageView('/');
+  }, []);
 
   const handleBookingClick = () => {
     setIsBookingModalOpen(true);
+    trackBookingModal('open');
+  };
+
+  const handleModalClose = (open: boolean) => {
+    setIsBookingModalOpen(open);
+    if (!open) {
+      trackBookingModal('close');
+    }
   };
 
   return (
@@ -26,8 +41,9 @@ const Index = () => {
       <FinalCTA onBookingClick={handleBookingClick} />
       <BookingModal 
         open={isBookingModalOpen} 
-        onOpenChange={setIsBookingModalOpen} 
+        onOpenChange={handleModalClose} 
       />
+      <ChatWidget />
     </div>
   );
 };

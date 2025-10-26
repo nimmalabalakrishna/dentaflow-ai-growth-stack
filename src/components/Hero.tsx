@@ -1,11 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import HeroVideo from "./HeroVideo";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface HeroProps {
   onBookingClick: () => void;
 }
 
 const Hero = ({ onBookingClick }: HeroProps) => {
+  const { trackCTAClick } = useAnalytics();
+
+  const handleCTAClick = () => {
+    trackCTAClick('hero_section', 'Book Your AI Strategy Session');
+    onBookingClick();
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
       {/* Background gradient effect */}
@@ -57,7 +66,7 @@ const Hero = ({ onBookingClick }: HeroProps) => {
               variant="hero" 
               size="lg" 
               className="text-lg px-8 py-6 h-auto"
-              onClick={onBookingClick}
+              onClick={handleCTAClick}
             >
               Book Your AI Strategy Session
               <ArrowRight className="w-5 h-5" />
@@ -66,6 +75,9 @@ const Hero = ({ onBookingClick }: HeroProps) => {
               Free 30-minute consultation • No commitment required
             </p>
           </div>
+
+          {/* Demo Video */}
+          <HeroVideo />
         </div>
       </div>
     </section>
